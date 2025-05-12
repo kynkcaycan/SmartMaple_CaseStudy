@@ -1,0 +1,9 @@
+pydantic~=2.10
+sqlalchemy
+psycopg2-binary
+requests
+schedule
+dotenv
+uvicorn
+fastapi
+geopy

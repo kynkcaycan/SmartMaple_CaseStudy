@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pswd
+    ports:
+      - "5432:5432"
+
+  scraper:
+    build: .
+    depends_on:
+      - postgres
+    volumes:
+      - .:/src
+    environment:
+      DB_URL: postgresql://user:pswd@src-postgres-1:5432/postgres
+    command: [ "python", "main.py" ]
