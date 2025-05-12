@@ -8,7 +8,7 @@ If you have any questions in mind you can connect to me directly via info@smart-
 """
 
 """
-İlk olarak, gerekli bağımlılıkları içeren veritabanı bağlantısı başlatılır (init_db() fonksiyonu ile). Ardından, kamp alanları verisini çekmek için scrape_campgrounds() fonksiyonu belirli aralıklarla çalıştırılacak şekilde zamanlanır. Zamanlama, schedule modülü kullanılarak her 15 dakikada bir bu işin yapılması sağlanır. Uygulama çalıştırıldığında, veritabanı bağlantısı kurulur ve scraper'ın işleyişine başlamak için bir iş başlatılır. Ayrıca, scraper sürekli olarak belirtilen zaman diliminde çalışmaya devam eder. 
+İlk olarak, gerekli bağımlılıkları içeren veritabanı bağlantısı başlatılır (init_db() fonksiyonu ile). Ardından, kamp alanları verisini çekmek için scrape_campgrounds() fonksiyonu belirli aralıklarla çalıştırılacak şekilde zamanlanır. Zamanlama, schedule modülü kullanılarak her 3 dakikada bir bu işin yapılması sağlanır. Uygulama çalıştırıldığında, veritabanı bağlantısı kurulur ve scraper'ın işleyişine başlamak için bir iş başlatılır. Ayrıca, scraper sürekli olarak belirtilen zaman diliminde çalışmaya devam eder. 
 """
 from models import Base
 from scraper import scrape_campgrounds
@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     job(engine)
     
-    schedule.every(15).minutes.do(job, engine)
+    schedule.every(3).minutes.do(job, engine)
 
     while True:
         schedule.run_pending()

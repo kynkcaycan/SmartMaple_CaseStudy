@@ -69,7 +69,7 @@ def scrape_campgrounds(engine):
                 data = response.json()
 
                 if not data.get("data"):
-                    logging.info("✅ Tüm veriler çekildi.")
+                    logging.info(" Tüm veriler çekildi.")
                     break
 
                 for item in data["data"]:
