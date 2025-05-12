@@ -1,11 +1,13 @@
 
-
-
+Docker Üzerinden PostgreSQL Veritabanına Terminalden Bağlanma
 ![Docker Üzerinden PostgreSQL Veritabanına Terminalden Bağlanma](image1.png
 )
-
-
-
+Tablodan bazı sütunların sql kodu ile çekilmesi
+![Docker Üzerinden PostgreSQL Veritabanına Terminalden Bağlanma](image2.png
+)
+Çekilen veriler(adres kısmı geolocator ile bulunmuştur )
+![Docker Üzerinden PostgreSQL Veritabanına Terminalden Bağlanma](image3.png
+)
 
 
 
