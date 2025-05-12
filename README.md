@@ -1,3 +1,26 @@
+
+
+
+![Docker Üzerinden PostgreSQL Veritabanına Terminalden Bağlanma](image1.png
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Web-Scrape Case Study
 
 ## Overview
