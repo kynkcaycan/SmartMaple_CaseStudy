@@ -3,7 +3,9 @@ Bu dosya, API üzerinden tetiklenebilen arka plan scraping işlemi için FastAPI
 """
 
 """
-uvicorn api:app --reload komutunu terminalde çalıştırdıktan sonra api ye istek attığımda veritabanı bağlantısı kuruluyor. Ancak, scraping işlemi sırasında "utf-8' codec can't decode byte 0xf6 in position 68: invalid start byte" şeklinde bir hata alıyorum. Şu an bu hatanın nedenini tam olarak çözebilmiş değilim.
+uvicorn api:app --reload komutunu terminalde çalıştırdıktan sonra api ye istek attığımda veritabanı bağlantısı kuruluyor. 
+Ancak, scraping işlemi sırasında "utf-8' codec can't decode byte 0xf6 in position 68: invalid start byte" şeklinde bir hata alıyorum.
+Şu an bu hatanın nedenini tam olarak çözebilmiş değilim.
 
 """
 

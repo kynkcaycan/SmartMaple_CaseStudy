@@ -1,4 +1,11 @@
-"""Bu Python scripti, coğrafi verileri kullanarak ABD'deki kamp alanlarını scrape etmek için tasarlanmış. İlk olarak gerekli kütüphaneler (requests, geopy, SQLAlchemy, vb.) içe aktarılıyor ve loglama yapılandırması yapılmakta. Script, `geopy`'nin `Nominatim` sınıfını kullanarak, kamp alanlarının enlem ve boylam bilgilerini alır ve bu koordinatlara karşılık gelen adresi `get_address` fonksiyonu ile sorgular. Eğer adres bulunamazsa, hata loglanır. Kamp alanları, The Dyrt API'sine yapılan isteklerle alınır. API'ye her seferinde belirli sınırlar (ABD'nin coğrafi sınırları) ve sayfa numarasına göre sorgular yapılır. Veriler, API'den JSON formatında alınır ve her kamp alanı için gerekli özellikler doğrulandıktan sonra, veritabanına eklenir. Bu ekleme işlemi sırasında, kamp alanı adresi de alınarak veritabanına kaydedilir. Veritabanı işlemleri SQLAlchemy session kullanılarak yapılır ve her sayfa tamamlandığında bir sonraki sayfaya geçilir. Hatalar ve API istek hataları loglanır. Bu süreç, tüm kamp alanları çekilene kadar devam eder.
+"""Bu Python scripti, coğrafi verileri kullanarak ABD'deki kamp alanlarını scrape etmek için tasarlanmış.
+ İlk olarak gerekli kütüphaneler (requests, geopy, SQLAlchemy, vb.) içe aktarılıyor ve loglama yapılandırması yapılmakta. 
+ Script, `geopy`'nin `Nominatim` sınıfını kullanarak, kamp alanlarının enlem ve boylam bilgilerini alır ve bu koordinatlara karşılık gelen adresi `get_address` fonksiyonu ile sorgular.
+ Eğer adres bulunamazsa, hata loglanır. Kamp alanları, The Dyrt API'sine yapılan isteklerle alınır. 
+ API'ye her seferinde belirli sınırlar (ABD'nin coğrafi sınırları) ve sayfa numarasına göre sorgular yapılır. 
+ Veriler, API'den JSON formatında alınır ve her kamp alanı için gerekli özellikler doğrulandıktan sonra, veritabanına eklenir. Bu ekleme işlemi sırasında, kamp alanı adresi de alınarak veritabanına kaydedilir. 
+ Veritabanı işlemleri SQLAlchemy session kullanılarak yapılır ve her sayfa tamamlandığında bir sonraki sayfaya geçilir. 
+ Hatalar ve API istek hataları loglanır. Bu süreç, tüm kamp alanları çekilene kadar devam eder.
  """
 
 from geopy.geocoders import Nominatim

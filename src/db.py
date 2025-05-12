@@ -1,6 +1,10 @@
 
 """  
-Öncelikle .env dosyasındaki ortam değişkenleri load_dotenv() ile yüklenir ve DB_URL adlı veritabanı bağlantı adresi alınır. Eğer bu bilgi bulunamazsa, hata fırlatılır. Daha sonra create_engine ile SQLAlchemy veritabanı motoru oluşturulur. Base.metadata.create_all(engine) komutu ile models.py dosyasında tanımlı olan tüm SQLAlchemy modellerine karşılık gelen tablolar veritabanında oluşturulur. Son olarak, bağlantı motoru (engine) döndürülerek sistemin geri kalanında kullanılmaya hazır hale getirilir.
+Öncelikle .env dosyasındaki ortam değişkenleri load_dotenv() ile yüklenir ve DB_URL adlı veritabanı bağlantı adresi alınır. 
+Eğer bu bilgi bulunamazsa, hata fırlatılır. 
+Daha sonra create_engine ile SQLAlchemy veritabanı motoru oluşturulur. 
+Base.metadata.create_all(engine) komutu ile models.py dosyasında tanımlı olan tüm SQLAlchemy modellerine karşılık gelen tablolar veritabanında oluşturulur.
+Son olarak, bağlantı motoru (engine) döndürülerek sistemin geri kalanında kullanılmaya hazır hale getirilir.
 
 """
 
